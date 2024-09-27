@@ -1,5 +1,5 @@
  #include <stdio.h>
-
+ #include<conio.h>
 #define MAX 100  // Maximum number of vertices
 
 int adj[MAX][MAX];
@@ -93,5 +93,5 @@ int main() {
 
     printf("\n Shortest Path Matrix:\n");
     print();
-    return 0;
+    getch();
 }
