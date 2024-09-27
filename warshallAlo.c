@@ -21,9 +21,9 @@ void inputGraph() {
             adj[i][j] = 0;
         }
     }
- 
+  printf("Enter edge (source destination): ");
     for (int i = 0; i < edges; i++) {
-        printf("Enter edge (source destination): ");
+        
         scanf("%d %d", &src, &dest);
         adj[src][dest] = 1;  
     }
