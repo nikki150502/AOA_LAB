@@ -3,7 +3,7 @@
 #define MAX 100  // Maximum number of vertices
 
 int adj[MAX][MAX];
-int ans[MAX][MAX] ; // Adjacency matrix for the graph
+  // Adjacency matrix for the graph
 int n;              // Number of vertices
  
 void inputGraph() {
@@ -38,24 +38,24 @@ void print() {
         printf("\n");
     }
 }
-void swaped()
-{
-    int i,j;
-    for(i=0;i<n;i++)
-    {
-        for(j=0;j<n;j++)
-        {
-            ans[i][j]=adj[i][j];
-        }
-    }
-}
+// void swaped()
+// {
+//     int i,j;
+//     for(i=0;i<n;i++)
+//     {
+//         for(j=0;j<n;j++)
+//         {
+//              adj[i][j]=adj[i][j];
+//         }
+//     }
+// }
 
  
 void warshall() {
     int i, j, k;
     // node
     for (k = 0; k < n; k++) {
-        swaped();
+        // swaped();
         // i
         for (i = 0; i < n; i++) {
             // j
@@ -70,7 +70,7 @@ void warshall() {
                     j++;
                 }
               
-                if (ans[i][k]==1 && ans[k][j]==1 ||ans[i][j]==1) {
+                if ( adj[i][k]==1 &&  adj[k][j]==1 || adj[i][j]==1) {
                     adj[i][j] = 1;
                 }
                else 
@@ -84,13 +84,9 @@ void warshall() {
 
 int main() {
     inputGraph();
-    
     printf("Adjacency Matrix:\n");
     print();
-
-   
     warshall();
-
     printf("\n Shortest Path Matrix:\n");
     print();
     getch();
