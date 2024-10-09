@@ -26,7 +26,7 @@ void selection(int a[100], int n)
              }
              temp  = a[i];
              a[i]=a[index];
-             a[index]=temp;4
+             a[index]=temp;
              
     }
 }
